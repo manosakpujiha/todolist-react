@@ -22,12 +22,13 @@ export default class TodoList extends Component {
         })
     }
     deleteTodo(id){
-        const result = this.state.todos.filter(todo => {return todo.id !== id ? todo : ''});
         this.setState((state) => { 
-            return {todos : [...result]} 
+            return {todos : [...state.todos.filter(todo => todo.id !== id )]} 
         })
     }
     render() {
+        console.log(this.state)
+
         const todos = this.state.todos.map((todo) => (<Todo id={todo.id} key={uuidv4()} task={todo.task}  deleteTodo={this.deleteTodo}/>))
         return (
             <div>

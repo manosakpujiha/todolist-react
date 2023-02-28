@@ -6,7 +6,6 @@ export default class Todo extends Component {
         this.handleClick =this.handleClick.bind(this)
     }
     handleClick(e) {
-        // console.log(e.target.id)
         this.props.deleteTodo(e.target.id)
     }
   render() {
