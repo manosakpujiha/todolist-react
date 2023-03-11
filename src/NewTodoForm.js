@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default class NewTodoForm extends Component {
     constructor(props){
@@ -6,7 +6,7 @@ export default class NewTodoForm extends Component {
         this.state = {
             task : ''
         }
-        this.handleClick = this.handleClick.bind(this);
+        this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     handleSubmit(e){
@@ -14,7 +14,7 @@ export default class NewTodoForm extends Component {
         this.props.createNewToDo(this.state);
         this.setState({ task : ''});
     }
-    handleClick(e){
+    handleChange(e){
            this.setState({[e.target.name]: e.target.value})
     }
   render() {
@@ -22,7 +22,7 @@ export default class NewTodoForm extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
             <label htmlFor='task'>Add a new Task</label>
-            <input  onChange={this.handleClick}  name='task' id='task' placeholder='New task' value={this.state.task}/>
+            <input  onChange={this.handleChange}  name='task' id='task' placeholder='New task' value={this.state.task}/>
             <button>Submit</button>
         </form>
 

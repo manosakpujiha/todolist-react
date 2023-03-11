@@ -1,0 +1,13 @@
+.done{
+    text-decoration: line-through;
+    text-decoration-style: double;
+    color: rgb(255, 72, 0);
+}
+
+.Todo {
+    margin: 30px;
+}
+
+.Todo-label {
+    padding-right: 20px;
+}
