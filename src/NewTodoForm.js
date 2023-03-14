@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import './NewTodoForm.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDollar, faTrashCan, faPen, faStrikethrough, faSquarePlus, faPlus, faSave, faPenAlt } from '@fortawesome/free-solid-svg-icons';
 
 export default class NewTodoForm extends Component {
     constructor(props){
@@ -19,14 +22,12 @@ export default class NewTodoForm extends Component {
     }
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-            <label htmlFor='task'>Add a new Task</label>
+ 
+        <form className='NewTodoForm' onSubmit={this.handleSubmit}>
+            <label htmlFor='task'>Add a new task</label>
             <input  onChange={this.handleChange}  name='task' id='task' placeholder='New task' value={this.state.task}/>
-            <button>Submit</button>
+            <button><FontAwesomeIcon icon={faPlus}   size="lg" className="icon" title="Add a new task"/></button>
         </form>
-
-      </div>
     )
   }
 }
