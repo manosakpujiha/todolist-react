@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import './Todo.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDollar, faTrashCan, faPen, faStrikethrough, faSquarePlus, faPlus, faFloppyDisk, faPencilAlt } from '@fortawesome/free-solid-svg-icons';
+import {  faTrashCan, faStrikethrough, faFloppyDisk, faPencilAlt } from '@fortawesome/free-solid-svg-icons';
 
-
-import NewTodoForm from './NewTodoForm';
-import { v4 as uuidv4 } from 'uuid';
 
 export default class Todo extends Component {
     constructor(props) {

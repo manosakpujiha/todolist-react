@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './NewTodoForm.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDollar, faTrashCan, faPen, faStrikethrough, faSquarePlus, faPlus, faSave, faPenAlt } from '@fortawesome/free-solid-svg-icons';
+import { faPlus} from '@fortawesome/free-solid-svg-icons';
 
 export default class NewTodoForm extends Component {
     constructor(props){
